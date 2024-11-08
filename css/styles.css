@@ -10,7 +10,12 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
 :root {
+  --overrule-color-rgb: 44, 0, 255;
+  --overrule-color: rgb(44, 0, 255);
+  --overrule-color-a: rgb(44, 0, 255);
+  --overrule-color-a-hover: rgb(64, 64, 255);
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -41,7 +46,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 244, 98, 58;
+  --bs-primary-rgb: var(--overrule-color-rgb);
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -252,11 +257,11 @@ sup {
 }
 
 a {
-  color: #f4623a;
+  color: var(--overrule-color-a);
   text-decoration: underline;
 }
 a:hover {
-  color: #c34e2e;
+  color: var(--overrule-color-a-hover);
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3048,13 +3053,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #f4623a;
-  border-color: #f4623a;
+  background-color: var(--overrule-color);
+  border-color: var(--overrule-color-a-hover);
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #cf5331;
-  border-color: #c34e2e;
+  background-color: var(--overrule-color-a-hover);
+  border-color: var(--overrule-color-a-hover);
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -3232,8 +3237,8 @@ textarea.form-control-lg {
   border-color: #f8f9fa;
 }
 .btn-light:hover {
-  color: #000;
-  background-color: #f9fafb;
+  color: #fff;
+  background-color: var(--overrule-color-a-hover);
   border-color: #f9fafb;
 }
 .btn-check:focus + .btn-light, .btn-light:focus {
@@ -11339,7 +11344,7 @@ hr.divider {
   height: 0.2rem;
   max-width: 3.25rem;
   margin: 1.5rem auto;
-  background-color: #f4623a;
+  background-color: var(--overrule-color);
   opacity: 1;
 }
 
